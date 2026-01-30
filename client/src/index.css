@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Google Fonts - Montserrat and Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,15 +46,16 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Galdino Brand Colors */
+  --primary: #0052A3;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #0052A3;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #0052A3;
+  --chart-2: #003d7a;
+  --chart-3: #D4AF37;
+  --chart-4: #B8860B;
+  --chart-5: #FFD700;
   --radius: 0.65rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.235 0.015 65);
@@ -59,30 +63,30 @@
   --card-foreground: oklch(0.235 0.015 65);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --secondary: #F5F5F5;
+  --secondary-foreground: #0052A3;
+  --muted: #E8E8E8;
+  --muted-foreground: #666666;
+  --accent: #D4AF37;
+  --accent-foreground: #0052A3;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
+  --border: #E0E0E0;
+  --input: #F9F9F9;
+  --ring: #0052A3;
   --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --sidebar-foreground: #0052A3;
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #0052A3;
+  --sidebar-border: #E0E0E0;
+  --sidebar-ring: #0052A3;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
+  --primary: #0052A3;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #0052A3;
+  --sidebar-primary-foreground: #FFFFFF;
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.85 0.005 65);
   --card: oklch(0.21 0.006 285.885);
@@ -93,24 +97,24 @@
   --secondary-foreground: oklch(0.7 0.005 65);
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  --accent: #D4AF37;
+  --accent-foreground: #0052A3;
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  --ring: #0052A3;
+  --chart-1: #0052A3;
+  --chart-2: #003d7a;
+  --chart-3: #D4AF37;
+  --chart-4: #B8860B;
+  --chart-5: #FFD700;
   --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --sidebar-foreground: #0052A3;
+  --sidebar-accent: #D4AF37;
+  --sidebar-accent-foreground: #0052A3;
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --sidebar-ring: #0052A3;
 }
 
 @layer base {
@@ -119,6 +123,19 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  .font-display {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -159,6 +176,8 @@
     min-height: 0;
     min-width: 0;
   }
+
+
 
   @media (min-width: 640px) {
     .container {
