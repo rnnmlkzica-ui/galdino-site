@@ -25,11 +25,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#0052A3' }}>
-              <div className="w-8 h-8 border-2 rounded-sm transform rotate-45 flex items-center justify-center" style={{ borderColor: '#D4AF37' }}>
-                <div className="w-4 h-4 rounded-sm" style={{ backgroundColor: '#D4AF37' }}></div>
-              </div>
-            </div>
+            <img src="/logo-galdino.png" alt="Grupo Galdino" className="h-14 w-auto" />
             <div>
               <h1 className="text-lg font-bold" style={{ color: '#0052A3' }}>GRUPO GALDINO</h1>
               <p className="text-xs font-semibold" style={{ color: '#D4AF37' }}>SERVIÇOS TERCEIRIZADOS</p>
