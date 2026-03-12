@@ -4,7 +4,7 @@
   - Professional footer design
 */
 
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -97,6 +97,19 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" style={{ color: '#D4AF37' }} />
                 <span className="text-white/70">Todo Brasil</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Instagram className="w-4 h-4" style={{ color: '#D4AF37' }} />
+                <a
+                  href="https://www.instagram.com/galdinoservicos81/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 transition-colors"
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#D4AF37')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)')}
+                >
+                  @galdinoservicos81
+                </a>
               </div>
             </div>
           </div>
